@@ -1,0 +1,98 @@
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageTRAC.master.cs" Inherits="MasterPageTRAC" %>--%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+<head runat="server">
+<title>Traveler Rent A Car </title>
+<meta charset="utf-8">
+<meta name="Keywords" content="Arriendo de Autos,Arriendo de Vehiculos,puerto varas,reservas de vehiculos puerto varas,traveler,"><%--La etiqueta meta keywords se utiliza para resumir el contenido de un documento en base a unas cuantas palabras clave (de ahí su nombre).--%>
+<meta name="descripcion" content="Dedicados a arriendo d e vehiculos, en puerto varas y sus sectores turisticos"><%--Se utiliza para describir brevemente el contenido de la página, y pese a que el texto no es visible en el navegador, lo utilizan los buscadores como resumen en sus páginas de resultados.--%>
+ <meta name="Viewport" content="Width=device-width, initial-scale=1"><%--La etiqueta meta viewport se usa en los sitios que cuentan con una versión para móviles de tipo adaptable o responsive. Sirve para indicar cómo de grande se mostrará la página en la pantalla.--%>
+  
+  <link rel="stylesheet" type="text/css" href="css/nestilo.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css"
+  <link rel="stylesheet" type="text/css" href="">
+  
+  <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+<header>
+
+<div class ="logo">
+<img src="img/logotraveler.jpg" alt="logo traveler" title="logotraveler">
+</div>
+<nav>
+ <ul>
+
+
+<li><a href="index.aspx">Home</a></li>
+<li><a href="rentarvehiculo.aspx">Rentar Vehiculo</a></li>
+<li><a href="informacion.aspx">Informacion</a></li>  
+<li><a href="contacto.aspx">Contacto</a></li>
+ 
+ 
+ 
+  </ul>
+ </nav>
+
+
+
+ </header>
+
+
+    
+
+
+
+
+
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+     <footer>
+  <!--target es para crear una ventana en blanco -->
+
+<p><a href="loginadmin.aspx" target="_blank"><i class="fa fa-lock" aria-hidden="true"></i> </a> 
+                    <a href="https://es-la.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                     <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                     <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
+</footer>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script type="text/javascrip" src="js/jquery.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    $(window).load(function () {
+        $('.flexslider').flexslider();
+    });
+</script>
+</body>
+</html>

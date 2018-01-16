@@ -1,0 +1,437 @@
+/*lo primero es formatear el documento*/
+*{
+	border: 0;
+	
+	margin: 0;/*corresponde al margen exterior*/
+    
+	padding: 0;/*corresponde al margen interior*/
+	
+	box-sizing: border-box;/*para que no agregue los 20 px del padding sea absorbido hacia adentro */
+}
+
+body{
+background: black;/*CORRESPONDE A UN COLOR o imagen de fondo*/
+color: white;/*CORRESPONDE al color de la fuente*/
+font-size: 17px;/*tamaño de la fuente*/
+font-family: sans-serif;/*tipo de fuente*/
+text-align: center;/*alinea el texto : left, right,justify 
+es mejor centrar a la izquierda y derecha porque justify
+ da mucho espacio
+*/
+}
+
+header,section,footer{
+/*
+1)Cuando margin tiene solo un valor se aplicara  a los 4 
+lados (top, left, right, bottom)
+
+2)cuando hay 2 valores, corresponde al lado superior y al 
+lado inferior, y el segundo valor se aplica al lado 
+izquierdo y al lado derecho 
+
+3)cuando tengo 4 valores , es un valor por lado, en el 
+siguiente orden:top, left,bottom y right;
+*/
+margin: 3px auto;
+width:  90%;/*la medida fija de la pagina*/
+background: #797385;/*es el color del fondo*/
+border-radius: 10px;/*genera una curva en las esquinas*/
+padding:20px;/*le agrando el margen interior */
+}
+
+/*acceso del padre al hijo*/
+.logo, nav {
+	/*para ver el borde de cada caja
+   border: 1px solid white;
+   	*/
+
+	        
+width: 30%;/*para arreglar resolucion de pantalla*/
+
+display: inline-block;/*el inline deja todo en el mismo bloque */
+
+vertical-align: top;/*tiene opcion : top= arriba ,middle = medio ,bottom = abajo*/
+
+text-align: left;
+}
+nav {
+	
+text-align: right;/*alinea el texto*/
+
+	
+width: 65%;/*para arreglar resolucion de pantalla*/
+}
+/*no se le agrega , al padre e hijo*/
+nav ul{
+
+list-style: none;/*es para eliminar las viñetas*/
+}
+
+nav ul li {
+	
+	display: inline-block;/*deja todo en una misma linea*/
+}
+
+nav ul li a {
+
+color: black;/*color de la fuente*/
+	
+background: white;/*color de fondo*/
+
+text-decoration: none;
+
+padding: 16px 20px;/*le agrando el margen interior */
+
+
+display: block;/* deja todo en el mismo bloque hacia abajo */
+}
+
+nav ul li a:hover{
+	
+background: blue;/*color de fondo*/
+
+color: red;/*color de la fuente */
+}
+
+section.img-home {
+	
+padding: 0;/*le agrando el margen interior */
+}
+
+section.img-home img {
+	
+   width: 100%;/*para arreglar resolucion de pantalla*/
+
+   
+   border-radius: 10px;/*borde curvo*/
+
+}
+
+article {
+
+
+	display: inline-block;/*el inline deja todo en el mismo bloque */
+
+
+	vertical-align: top;/*tiene opcion : top= arriba ,middle = medio ,bottom = abajo*/
+
+
+   width: 30%;/*ancho*/ 	/*para arreglar resolucion de pantalla*/
+
+	
+   margin:0, 5px;/*tamaño del margen */
+
+	
+   background: #8DE900;/* tipo de color de fondo*/
+
+  
+   color: black; /*color de la fuente*/
+
+   
+   padding: 20px;/*le agrando el margen interior */
+   border-radius: 15px;
+}
+
+article i.fa {
+	
+font-size: 50px;/*tamaño de la fuente(iconos de faceboo css3 responsive)*/
+
+
+color: orange;/*color de la fuente*/
+
+
+width: 100px;/*ancho*/	/*para arreglar resolucion de pantalla*/
+
+
+height: 100px;/*largo*/ 	/*para arreglar resolucion de pantalla*/
+
+
+border-radius: 50%;/*es para redondear*/
+
+	
+background: black;/* tipo de color de fondo*/
+
+
+line-height: 100px;/*es un interlineado */
+
+}
+
+article h3 {
+	
+margin: 15px 0;/*tamaño del margen */
+
+	
+font-size: 30px;/*tamaño de la fuente*/ 
+
+	
+font-family: 'Hind Siliguri', sans-serif;/*tipo de fuente de la letra*/
+}
+article p {
+
+	line-height: 23px;/*interlineado y tienen que ser 7 px superior que el tamaño de la fuente*/
+
+/*sombra al texto solo al texto
+primer valor corresponde al desplazamiento horizontal se el valor es + se mueve hacia la derecha y si es - se mueve hacia la izquierda
+segundo valor corresponde al desplazamiento vertical si es + la sombra se desplaza hacia arriba y si es - se desplaza hacia abajo
+tercer  es el grado de desenfoque
+cuarto corresponde al color de la sombra*/
+text-shadow: -2px -2px 3px #999  ;
+/*se aplica a la caja completa hace una sombra en el texto
+box-shadow: */
+} 
+article a{
+background: green;
+color: white;
+padding: 15px;
+display: block;
+margin-top: 10px;
+text-decoration: none;
+/*transition 
+1)a que propiedad se aplica
+2)tipo de transition
+3)tiempo de la transition*/
+-webkit-transition: all linear .3s ;
+-moz-ransition: all linear .3s ;
+-ms-transition: all linear .3s ;
+transition: all linear .3s ;
+}
+
+article a:hover{
+	opacity: 0.5;
+	/*color de fondo*/
+}
+ article:hover{
+background: #999;
+-webkit-transition: all linear .3s ;
+t-moz-ransition: all linear .3s ;
+-ms-transition: all linear .3s ;
+transition: all linear .3s ;
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+}
+footer p a {
+color: orange;
+/*es para subrayar el vinculo*/
+text-decoration: none;
+}
+footer p a:hover{
+	color:#8DE900;
+	text-decoration: underline;
+}
+
+section.conte-Servicios{
+	background-image: url(../img/img-home.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*para que la imagen se quede fija*/	
+	background-attachment: fixed;
+
+}
+
+article.caja{
+	width: 45%;
+	margin: 10px;
+	text-align: center;
+	/*rgb sistema cromatico compuesto por 3 colores primarios
+	red -> rojo 0---->255
+	green -> verde 0---->255
+	blue -> azul 0---->255
+	la ausencia completa de color es negro
+	los colores completos forman blanco
+	*/
+	background: rgba(255,255,255, .6);
+}
+
+section.conte-contacto{
+	color: #fff;
+	background: #000;
+}
+.formulario, .mapa{
+	display: inline-block;
+	/*genera un borde 
+	border: 1px dashed #fff;*/
+	padding: 10px;
+	width: 45%;
+	vertical-align: top;
+}
+ input, select, textarea{
+	display: block;
+	padding: 16px;
+	border: 1px solid #999;
+	border-radius: 8px;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 5px;
+	/*para que no aparesca linea azul al pinchar 
+	una casilla*/
+	outline: 0;
+}
+textarea{
+height: 120px
+}
+input[type="submit"]{
+	width: 200px;
+	display: inline-block;
+	background: #2c65bd;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+
+}
+
+input[type="submit"]:hover{
+background: green;
+}
+input:focus, textarea:focus{
+ 	/*genera un borde */
+	box-shadow: 0px 0px 20px blue;
+	border: 2px solid green;
+}
+.mapa iframe{
+	border-radius: 20px;
+	width: 100%;
+	height: 337px; 
+}
+
+section.conte-nosotros {
+	background: #fff;
+	color: black;
+ 
+}
+.video{
+	width: 80%;
+	padding: 50px;
+	background: #e8e8e8;
+	margin: auto;
+}
+.video iframe{
+	width: 100%; 
+	height: 350;
+}
+.mision-vision {
+	background: #333;
+	color: #fff;
+	padding: 50px;
+	width: 80%;
+	margin: auto;
+}
+
+
+
+.vision, .mision{
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	padding: 10px;
+	text-align:justify;
+	line-height: 23px;
+}
+.portafolio{
+	display: flex;
+	flex-wrap:wrap;/*esrte codigo respeta los anchos*/
+
+	width: 100%;
+	justify-content: space-between;/*este codigo tiene un punto de inicio y final de forma horizontal, similar al text aline center*/
+}
+.trabajo{
+
+	width: 30%;
+	
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+}
+.trabajo img {
+	width: 100%;
+}
+.extra{
+	width: 48%;
+}
+.mascara{
+	position: absolute;/*texto queda sobre la imagen*/
+	width: 100%;
+	background: rgba(0,0,0, .7);
+	color: white;
+	padding: 30px;
+	opacity: 1;
+	
+	top: 50px;
+	left: 50px;
+	transition: all linear .3s;
+}
+.mascara:hover{
+	opacity: 1;
+	top: 0;
+	left: 0;
+}
+/*Responsive*/
+/*definiendo reglas de dispositivos*/
+@media (max-width: 1024px){
+	header,section,footer{
+width: 100%;
+border-radius: 0;
+margin: 0;
+
+	}
+
+	}
+
+@media (max-width: 859px){
+.logo,nav{
+
+	width: 100%;
+	text-align: center;
+}
+.logo{
+margin-bottom: 10px;
+
+}
+.formulario, .mapa{
+	width: 90%;
+}
+.mision, .mision-vision{
+	width: 95%;
+}
+.vision, .mision{
+	width: 100%;
+	margin-bottom: 5px;
+}
+}
+@media (max-width: 768px){
+.logo{
+	width: 150px;
+	margin: 0 auto;
+
+}
+.logo{
+	margin-bottom: 10px;
+}
+
+
+nav ul li{
+	display: block;
+	margin-bottom: 2px;
+}
+
+
+section.img-home{
+
+	display: none;
+}
+article{
+	margin: 2px 0;
+	width: 100%;
+}
+.mision, .mision-vision{
+	width: 100%;
+}
+.vision, .mision{
+	width: 100%;
+	margin-bottom: 5px;
+}
+}
+

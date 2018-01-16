@@ -1,0 +1,417 @@
+*{
+	border: 0;
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family: Georgia;
+}
+body{
+	background-color: black;
+	font-size: 16px;
+	text-align: center;
+}
+header,section,footer{
+	margin: 3px auto;
+	width:  100%;
+	background: #5F94FF;
+	border-radius: 9px;
+	padding: 20px;
+
+}
+
+.logo, nav {
+	width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    vertical-align: middle;
+text-align: left;
+
+}
+.logo img{
+	height: 10%;
+	border-radius:3px;
+    width     : 40%;
+    /*opacity: 0.25;*/
+}
+nav{
+	text-align: right;
+	width: 65%;
+
+}
+nav ul{
+	list-style: center;
+}
+
+nav ul li {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+nav ul li a {
+
+     color: white;
+	 background: #1F68F5;
+	 text-decoration: none;
+	 padding: 17px 25px;
+	 display: block;
+	 border-radius:3px;
+
+
+}
+
+nav ul li a:hover{
+	
+     background: #5F94FF;
+     color: black ;
+     
+     
+-webkit-transition: all linear .3s ;
+t-moz-ransition: all linear .3s ;
+-ms-transition: all linear .3s ;
+transition: all linear .3s ;
+-webkit-transform: scale(2.05);
+-moz-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.15);
+     
+
+}
+section.img-home {
+	
+     padding: 0;
+}
+
+section.img-home img {
+	
+   width: 100%;
+   border-radius: 5px;
+}
+
+.informacion{
+	display: inline-block;
+	vertical-align: top;
+	 width: 30%;
+	 margin: 0 10px;
+     background:#8CA4BD ;
+     color: black;
+     padding: 20px;
+     border-radius: 5px;
+}
+section .conte-home ,article i.fa{
+	background: black;
+	font-size: 50px;
+	color:#B0B6C4;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	line-height: 100px;
+}
+.informacion h3{
+	margin: 15px 0;
+	font-size: 30px;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+.informacion p{
+	line-height: 20px;
+	text-shadow: 2px 2px 2px #999  ;
+}
+
+ .informacion a{
+background: #3E31D6;
+color: white;
+padding: 18px;
+display: block;
+margin-top: 10px;
+text-decoration: none;
+
+-webkit-transition: all linear .2s ;
+-moz-ransition: all linear .2s ;
+-ms-transition: all linear .2s ;
+transition: all linear .2s ;
+}
+.informacion a:hover{
+	opacity: 0.5;
+}
+.informacion:hover{
+background: #D1D6D6;
+-webkit-tra
+nsition: all linear .2s ;
+t-moz-ransition: all linear .2s ;
+-ms-transition: all linear .2s ;
+transition: all linear .2s ;
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+}
+footer p a {
+color: #3E31D6;
+text-decoration: none;
+}
+footer p a:hover{
+	color:#999;
+	text-decoration: underline;
+}
+footer{
+	background:#8CA4BD;
+}
+
+.titulos h1{
+	margin: 5px 5px;
+	font-size: 40px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+.titulos p{
+	
+	font-size: 30px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+.titulos-ex h1{
+	margin: 15px 15px;
+	font-size: 40px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+.titulos-ex p{
+	
+	font-size: 15px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+.titulos-ex, .mapa{
+	margin: 15px 15px;
+	display: inline-block;
+	
+	width: 45%;
+	vertical-align: top;
+}
+.caja{
+
+	display: inline-block;
+	padding: 10px;
+	width: 20%;
+	vertical-align: top;
+	margin: 0px;
+    border: black 1px solid;
+}
+.caja img{
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.mapa iframe{
+	border-radius: 5px;
+	width: 90%;
+	height: 200px; 
+}
+
+
+
+
+.titulosserv h1{
+	margin: 15px 15px;
+	font-size: 50px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+
+
+.cajas{
+	display: inline-block;
+	padding: 10px;
+	width: 20%;
+	vertical-align: top;
+    border: black 1px solid;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+
+   
+
+}
+.cajas img{
+	 width: 100%;
+	 height: 200px; 
+
+}
+
+
+
+
+.conte-contacto h1{
+	
+	font-size: 40px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+.conte-contacto p{
+
+	font-size: 25px;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+
+
+
+
+
+.formulario{
+	display: inline-block;
+	
+	padding: 20px;
+	width: 45%;
+	vertical-align: top;
+
+}
+.formulario{
+	width: 30%;
+	display: inline-block;
+	width: 100%;
+}
+input{
+	border: 1px solid black;
+	width: 8%;
+	height: 5%;
+	margin-bottom: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    display: inline-block;
+}
+textarea{
+	width: 23%;
+	border: 1px solid black;
+	height: 12%;
+	margin-bottom: 20px;
+
+}
+input[type=submit]{
+	width: 29%;
+	height: 8%;
+}
+input[type="submit"]:hover{
+background: #8CA4BD;
+}
+
+
+.conte-galeria {
+	font-size: 40px;
+	font-family: 'Hind Siliguri', sans-serif;
+	position: relative;
+
+    
+}
+.flexslider img{
+	width: 90%;
+	height: 30%;
+}
+
+.slides img{
+	 width: 250px;
+	 height: 200px; 
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+	header,section,footer{
+width: 100%;
+border-radius: 0;
+margin: 0;
+
+	}
+
+	}
+
+@media (max-width: 859px){
+.logo,nav{ 
+	width: 100%;
+	text-align: center;
+}
+
+nav ul li{
+	display: block;
+	margin-bottom: 2px;
+}
+
+.logo{
+margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px){
+.logo{
+	width: 150px;
+	margin: 0 auto;
+
+}
+.logo{
+	margin-bottom: 10px;
+}
+@media(max-width: 846px){
+	.informacion{
+		display: block;
+		width: 90%;
+	}
+}
+@media(max-width:698px){
+	.titulos,.titulos-ex , .mapa{
+		display: block;
+		width: 90%;
+	}
+}
+@media(max-width: 650px){
+	.caja {
+		display: block;
+		width: 90%;
+	}
+}
+@media(max-width: 768px){
+	.cajas{
+		display: block;
+		width: 90%;
+	}
+.cajas img{
+	width: 100%;
+}
+
+}
+@media(max-width: 750px){
+	 img{
+		display: block;
+		width: 80%;
+	}
+}
+
+
+
+@media(max-width: 859px){
+	
+	 input, textarea{
+	 	display: block;
+	 	width: 80%;
+
+	 }
+}
+
+
+
+
+
+
+
+
