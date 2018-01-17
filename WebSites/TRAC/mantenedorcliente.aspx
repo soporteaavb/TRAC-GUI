@@ -12,7 +12,10 @@
     &nbsp;</p>
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
     DataKeyNames="RUT" DataSourceID="SqlDataSource1" 
-    EmptyDataText="No hay registros de datos para mostrar.">
+    EmptyDataText="No hay registros de datos para mostrar." BackColor="White" 
+        BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+        GridLines="Vertical">
+    <AlternatingRowStyle BackColor="#DCDCDC" />
     <Columns>
         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         <asp:BoundField DataField="RUT" HeaderText="RUT" ReadOnly="True" 
@@ -31,6 +34,15 @@
         <asp:BoundField DataField="TIPO_LICENCIA" HeaderText="TIPO_LICENCIA" 
             SortExpression="TIPO_LICENCIA" />
     </Columns>
+    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+    <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+    <SortedAscendingHeaderStyle BackColor="#0000A9" />
+    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+    <SortedDescendingHeaderStyle BackColor="#000065" />
 </asp:GridView>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
@@ -68,7 +80,8 @@
 <p>
 </p>
 <asp:FormView ID="FormView1" runat="server" DataKeyNames="RUT" 
-    DataSourceID="SqlDataSource1">
+    DataSourceID="SqlDataSource1" BackColor="White" BorderColor="White" 
+        BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1">
     <EditItemTemplate>
         RUT:
         <asp:Label ID="RUTLabel1" runat="server" Text='<%# Eval("RUT") %>' />
@@ -103,6 +116,9 @@
         &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
             CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
     </EditItemTemplate>
+    <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+    <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
     <InsertItemTemplate>
         RUT:
         <asp:TextBox ID="RUTTextBox" runat="server" Text='<%# Bind("RUT") %>' />
@@ -170,6 +186,8 @@
         &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" 
             CommandName="New" Text="Nuevo" />
     </ItemTemplate>
+    <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+    <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
 </asp:FormView>
 <p>
 </p>

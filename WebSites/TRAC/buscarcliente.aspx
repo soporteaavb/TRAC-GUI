@@ -12,13 +12,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="Button1" runat="server" Text="Buscar" />
 </p>
-<p>
-</p>
-<p>
-</p>
-<p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
-        DataKeyNames="RUT" DataSourceID="SqlDataSource1" Height="50px" Width="125px">
+        DataKeyNames="RUT" DataSourceID="SqlDataSource1" Height="50px" 
+        Width="125px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
+        BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px">
+        <AlternatingRowStyle BackColor="#CCCCCC" />
+        <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
         <Fields>
             <asp:BoundField DataField="RUT" HeaderText="RUT" ReadOnly="True" 
                 SortExpression="RUT" />
@@ -36,8 +40,15 @@
             <asp:BoundField DataField="TIPO_LICENCIA" HeaderText="TIPO_LICENCIA" 
                 SortExpression="TIPO_LICENCIA" />
         </Fields>
+        <FooterStyle BackColor="#CCCCCC" />
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
     </asp:DetailsView>
-</p>
+
+<p>
+    &nbsp;</p>
+<p>
+<p>
 <p>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
