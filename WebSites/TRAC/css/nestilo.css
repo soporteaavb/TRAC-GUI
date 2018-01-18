@@ -1,9 +1,12 @@
 *{
-	border: 0;
-	margin: 0;
+	border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    margin: 0;
     padding: 0;
-	box-sizing: border-box;
+    box-sizing: border-box;
 	font-family: Georgia;
+    height: 85px;
 }
 body{
 	background-color: black;
@@ -277,12 +280,13 @@ footer{
 }
 input{
 	border: 1px solid black;
-	width: 8%;
+	width: 100px;
 	margin-bottom: 20px;
     margin-left: 0%;
     margin-right: 2%;
     margin-top: 1%;
     display: inline-block;
+    height: 27px;
 }
 textarea{
 	width: 23%;

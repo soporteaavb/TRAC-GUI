@@ -27,6 +27,7 @@
         {
             width: 220px;
             height: 170px;
+            float: left;
         }
         .style14
         {
@@ -37,11 +38,24 @@
         {
             width: 220px;
             height: 170px;
+            float: left;
         }
         .style16
         {
             width: 220px;
             height: 170px;
+        }
+        .style17
+        {
+            width: 223px;
+        }
+        .style18
+        {
+            width: 298px;
+        }
+        .style19
+        {
+            width: 224px;
         }
     </style>
 </asp:Content>
@@ -49,14 +63,33 @@
    
    <br />
     <br />
-    <img alt="" class="style13" src="img/dimax.jpg" />
-    <asp:CheckBox ID="btnsubmit" runat="submit" Enabled="False" 
-        Text="seleccionar" /> 
-
-    <img alt="" class="style14" src="img/rio5.jpg" /> <br />
+&nbsp; <br />
   
-    <img alt="" class="style15" src="img/sail.jpg" />
-    <img alt="" class="style16" src="img/mitsubishi-l200-galería.jpg" /> <br />
+    &nbsp;
+    <table class="style1">
+        <tr>
+            <td class="style17">
+  
+    <img alt="" class="style15" src="img/sail.jpg" /></td>
+            <td class="style18">
+                &nbsp;</td>
+            <td class="style19">
+                <img alt="" class="style14" src="img/rio5.jpg" /></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style17">
+    <img alt="" class="style16" src="img/mitsubishi-l200-galería.jpg" /></td>
+            <td class="style18">
+                &nbsp;</td>
+            <td class="style19">
+    <img alt="" class="style13" src="img/dimax.jpg" /></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <br />
     <br />
     <br />
    
@@ -65,7 +98,7 @@
     <table class="style1">
         <tr>
             <td class="style2">
-                &nbsp;</td>
+                 &nbsp   &nbsp   &nbsp   &nbsp  &nbsp;</td>
             <td class="style3">
                 &nbsp;</td>
             <td class="style4">
@@ -83,7 +116,7 @@
             <td class="style4">
                 RUT</td>
             <td class="style5">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" Height="16px" Width="114px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -119,7 +152,7 @@
             <td class="style4">
                 DIRECCION</td>
             <td class="style5">
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" Height="16px" Width="123px"></asp:TextBox>
             </td>
         </tr>
         <tr>
