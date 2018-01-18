@@ -278,9 +278,8 @@ footer{
 input{
 	border: 1px solid black;
 	width: 8%;
-	height: 5%;
 	margin-bottom: 20px;
-    margin-left: 2%;
+    margin-left: 0%;
     margin-right: 2%;
     margin-top: 1%;
     display: inline-block;
@@ -293,8 +292,6 @@ textarea{
 
 }
 input[type=submit]{
-	width: 29%;
-	height: 8%;
 }
 input[type="submit"]:hover{
 background: #8CA4BD;
