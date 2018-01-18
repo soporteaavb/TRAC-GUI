@@ -4,25 +4,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
-    <br />
-</p>
-<p>
-    Buscar cliente por Rut:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>
+        <table style="width:100%;">
+            <tr>
+                <td bgcolor="#1A3151" style="width: 200px; height: 32px">
+                    BUSCAR POR CLIENTE POR RUT</td>
+                <td bgcolor="#1A3151" style="width: 126px; height: 32px">
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td bgcolor="#1A3151" style="height: 32px">
     <asp:Button ID="Button1" runat="server" Text="Buscar" />
-</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px">
 
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
         DataKeyNames="RUT" DataSourceID="SqlDataSource1" Height="50px" 
-        Width="125px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
-        BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px">
-        <AlternatingRowStyle BackColor="#CCCCCC" />
-        <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+        Width="125px" CellPadding="4" ForeColor="Red" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
+        <EditRowStyle BackColor="#2461BF" />
+        <FieldHeaderStyle BackColor="#DEE8F5" Font-Bold="True" />
         <Fields>
             <asp:BoundField DataField="RUT" HeaderText="RUT" ReadOnly="True" 
                 SortExpression="RUT" />
@@ -40,13 +44,21 @@
             <asp:BoundField DataField="TIPO_LICENCIA" HeaderText="TIPO_LICENCIA" 
                 SortExpression="TIPO_LICENCIA" />
         </Fields>
-        <FooterStyle BackColor="#CCCCCC" />
-        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
     </asp:DetailsView>
 
-<p>
-    &nbsp;</p>
+                </td>
+                <td style="width: 126px">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+    </p>
+
 <p>
 <p>
 <p>
@@ -58,8 +70,6 @@
                 PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
-</p>
-<p>
 </p>
 <p>
 </p>

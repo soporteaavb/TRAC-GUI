@@ -9,6 +9,19 @@ Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">TRAVELER RENT A CAR</a></h1><p>   Administrador</p>
+    </div>
+    <div id="info">
+    </div>
+    <br class="clear" />
+  </div>
+</div>
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -16,26 +29,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
     </head>
-<body>
 
-    <form id="form1" runat="server">
-    <div>
-    <div class="wrapper col1">
-  <div id="header">
-    <div id="logo">
-      <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="#">TRAVELER RENT A CAR</a></td>
-                  <td class="justify">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  ADMINISTRADOR</td>
-              </tr>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-    </div>
-    <div id="info">
-    </div>
-    <br class="clear" />
-  </div>
-</div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ContentPlaceHolder 
             ID="ContentPlaceHolder2" runat="server">
             <table style="width:100%;">
@@ -89,7 +83,7 @@ Licence URI: http://www.os-templates.com/template-terms
                     </td>
                     <td>
         <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" 
-            LogoutPageUrl="~/rentarvehiculo.aspx" BorderStyle="Solid" ForeColor="White" />
+            LogoutPageUrl="~/index.aspx" BorderStyle="Solid" ForeColor="White" />
                     </td>
                 </tr>
             </table>

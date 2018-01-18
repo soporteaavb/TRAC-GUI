@@ -6,17 +6,26 @@
     <p>
         <br />
     </p>
-    <p>
-        Buscar por patente:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <table style="width:100%;">
+        <tr>
+            <td style="width: 140px">
+                BUSCAR POR PATENTE</td>
+            <td style="width: 124px">
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
         <asp:Button ID="Button2" runat="server" Text="Buscar" />
-    </p>
-    <p>
-    </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 140px">
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
         DataKeyNames="ID_PATENTE" DataSourceID="SqlDataSource1" Height="50px" 
-        Width="125px">
+        Width="125px" CellPadding="4" ForeColor="Red" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+        <EditRowStyle BackColor="#7C6F57" />
+        <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
         <Fields>
             <asp:BoundField DataField="ID_PATENTE" HeaderText="ID_PATENTE" ReadOnly="True" 
                 SortExpression="ID_PATENTE" />
@@ -34,7 +43,32 @@
             <asp:BoundField DataField="ID_ESTADO" HeaderText="ID_ESTADO" 
                 SortExpression="ID_ESTADO" />
         </Fields>
+        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#E3EAEB" />
     </asp:DetailsView>
+            </td>
+            <td style="width: 124px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 140px">
+                &nbsp;</td>
+            <td style="width: 124px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    <p>
+    </p>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
         SelectCommand="SELECT * FROM [VEHICULO] WHERE ([ID_PATENTE] = @ID_PATENTE)">

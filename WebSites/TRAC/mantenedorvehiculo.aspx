@@ -12,7 +12,9 @@
 </p>
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
     DataKeyNames="ID_PATENTE" DataSourceID="SqlDataSource1" 
-    EmptyDataText="No hay registros de datos para mostrar.">
+    EmptyDataText="No hay registros de datos para mostrar." CellPadding="4" 
+        ForeColor="Red" GridLines="None">
+    <AlternatingRowStyle BackColor="White" />
     <Columns>
         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         <asp:BoundField DataField="ID_PATENTE" HeaderText="ID_PATENTE" ReadOnly="True" 
@@ -31,6 +33,16 @@
         <asp:BoundField DataField="ID_ESTADO" HeaderText="ID_ESTADO" 
             SortExpression="ID_ESTADO" />
     </Columns>
+    <EditRowStyle BackColor="#7C6F57" />
+    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+    <RowStyle BackColor="#E3EAEB" />
+    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+    <SortedAscendingCellStyle BackColor="#F8FAFA" />
+    <SortedAscendingHeaderStyle BackColor="#246B61" />
+    <SortedDescendingCellStyle BackColor="#D4DFE1" />
+    <SortedDescendingHeaderStyle BackColor="#15524A" />
 </asp:GridView>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
@@ -66,125 +78,7 @@
     </UpdateParameters>
 </asp:SqlDataSource>
 <p>
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_PATENTE" 
-        DataSourceID="SqlDataSource1">
-        <EditItemTemplate>
-            ID_PATENTE:
-            <asp:Label ID="ID_PATENTELabel1" runat="server" 
-                Text='<%# Eval("ID_PATENTE") %>' />
-            <br />
-            MARCA:
-            <asp:TextBox ID="MARCATextBox" runat="server" Text='<%# Bind("MARCA") %>' />
-            <br />
-            MODELO:
-            <asp:TextBox ID="MODELOTextBox" runat="server" Text='<%# Bind("MODELO") %>' />
-            <br />
-            COLOR:
-            <asp:TextBox ID="COLORTextBox" runat="server" Text='<%# Bind("COLOR") %>' />
-            <br />
-            NUMERO_MOTOR:
-            <asp:TextBox ID="NUMERO_MOTORTextBox" runat="server" 
-                Text='<%# Bind("NUMERO_MOTOR") %>' />
-            <br />
-            NUMERO_CHASIS:
-            <asp:TextBox ID="NUMERO_CHASISTextBox" runat="server" 
-                Text='<%# Bind("NUMERO_CHASIS") %>' />
-            <br />
-            TIPO_VEHICULO:
-            <asp:TextBox ID="TIPO_VEHICULOTextBox" runat="server" 
-                Text='<%# Bind("TIPO_VEHICULO") %>' />
-            <br />
-            AÑO:
-            <asp:TextBox ID="AÑOTextBox" runat="server" Text='<%# Bind("AÑO") %>' />
-            <br />
-            ID_ESTADO:
-            <asp:TextBox ID="ID_ESTADOTextBox" runat="server" 
-                Text='<%# Bind("ID_ESTADO") %>' />
-            <br />
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
-                CommandName="Update" Text="Actualizar" />
-            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
-                CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
-        </EditItemTemplate>
-        <InsertItemTemplate>
-            ID_PATENTE:
-            <asp:TextBox ID="ID_PATENTETextBox" runat="server" 
-                Text='<%# Bind("ID_PATENTE") %>' />
-            <br />
-            MARCA:
-            <asp:TextBox ID="MARCATextBox" runat="server" Text='<%# Bind("MARCA") %>' />
-            <br />
-            MODELO:
-            <asp:TextBox ID="MODELOTextBox" runat="server" Text='<%# Bind("MODELO") %>' />
-            <br />
-            COLOR:
-            <asp:TextBox ID="COLORTextBox" runat="server" Text='<%# Bind("COLOR") %>' />
-            <br />
-            NUMERO_MOTOR:
-            <asp:TextBox ID="NUMERO_MOTORTextBox" runat="server" 
-                Text='<%# Bind("NUMERO_MOTOR") %>' />
-            <br />
-            NUMERO_CHASIS:
-            <asp:TextBox ID="NUMERO_CHASISTextBox" runat="server" 
-                Text='<%# Bind("NUMERO_CHASIS") %>' />
-            <br />
-            TIPO_VEHICULO:
-            <asp:TextBox ID="TIPO_VEHICULOTextBox" runat="server" 
-                Text='<%# Bind("TIPO_VEHICULO") %>' />
-            <br />
-            AÑO:
-            <asp:TextBox ID="AÑOTextBox" runat="server" Text='<%# Bind("AÑO") %>' />
-            <br />
-            ID_ESTADO:
-            <asp:TextBox ID="ID_ESTADOTextBox" runat="server" 
-                Text='<%# Bind("ID_ESTADO") %>' />
-            <br />
-            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
-                CommandName="Insert" Text="Insertar" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
-                CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
-        </InsertItemTemplate>
-        <ItemTemplate>
-            ID_PATENTE:
-            <asp:Label ID="ID_PATENTELabel" runat="server" 
-                Text='<%# Eval("ID_PATENTE") %>' />
-            <br />
-            MARCA:
-            <asp:Label ID="MARCALabel" runat="server" Text='<%# Bind("MARCA") %>' />
-            <br />
-            MODELO:
-            <asp:Label ID="MODELOLabel" runat="server" Text='<%# Bind("MODELO") %>' />
-            <br />
-            COLOR:
-            <asp:Label ID="COLORLabel" runat="server" Text='<%# Bind("COLOR") %>' />
-            <br />
-            NUMERO_MOTOR:
-            <asp:Label ID="NUMERO_MOTORLabel" runat="server" 
-                Text='<%# Bind("NUMERO_MOTOR") %>' />
-            <br />
-            NUMERO_CHASIS:
-            <asp:Label ID="NUMERO_CHASISLabel" runat="server" 
-                Text='<%# Bind("NUMERO_CHASIS") %>' />
-            <br />
-            TIPO_VEHICULO:
-            <asp:Label ID="TIPO_VEHICULOLabel" runat="server" 
-                Text='<%# Bind("TIPO_VEHICULO") %>' />
-            <br />
-            AÑO:
-            <asp:Label ID="AÑOLabel" runat="server" Text='<%# Bind("AÑO") %>' />
-            <br />
-            ID_ESTADO:
-            <asp:Label ID="ID_ESTADOLabel" runat="server" Text='<%# Bind("ID_ESTADO") %>' />
-            <br />
-            <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" 
-                CommandName="Edit" Text="Editar" />
-            &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" 
-                CommandName="Delete" Text="Eliminar" />
-            &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" 
-                CommandName="New" Text="Nuevo" />
-        </ItemTemplate>
-    </asp:FormView>
-</p>
+    &nbsp;</p>
 <p>
 </p>
 <p>
@@ -194,4 +88,64 @@
 <p>
 </p>
 </asp:Content>
+
+<asp:Content ID="Content3" runat="server" 
+    contentplaceholderid="ContentPlaceHolder2">
+            <table style="width:100%;">
+                <tr>
+                    <td>
+        <asp:Menu ID="Menu1" runat="server" BackColor="#6699FF" 
+            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="1.6em" 
+            ForeColor="Red" Orientation="Horizontal" StaticSubMenuIndent="20px">
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#FFFBD6" />
+            <DynamicSelectedStyle BackColor="#FFCC66" />
+            <Items>
+                <asp:MenuItem Text="consultas" Value="consultas">
+                    <asp:MenuItem NavigateUrl="~/consultacliente.aspx" Text="clientes" 
+                        Value="clientes"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/consultareserva.aspx" Text="reserva" 
+                        Value="reserva"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/cosultavehiculo.aspx" Text="vehiculo" 
+                        Value="vehiculo"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="mantenedor" Value="mantenedor">
+                    <asp:MenuItem NavigateUrl="~/mantenedorcliente.aspx" Text="cliente" 
+                        Value="cliente"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/mantenedorreserva.aspx" Text="reserva" 
+                        Value="reserva"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/mantenedorvehiculo.aspx" Text="vehiculo" 
+                        Value="vehiculo"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="reporte" Value="reporte">
+                    <asp:MenuItem NavigateUrl="~/reportecliente.aspx" Text="listado cliente" 
+                        Value="listado cliente"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/reportereserva.aspx" Text="listado reserva" 
+                        Value="listado reserva"></asp:MenuItem>
+                    <asp:MenuItem Text="listado vehiculo" Value="listado vehiculo" 
+                        NavigateUrl="~/reportevehiculo.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="buscar" Value="buscar">
+                    <asp:MenuItem NavigateUrl="~/buscarcliente.aspx" Text="cliente" Value="cliente">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/buscaridreserva.aspx" Text="reservapor_id" 
+                        Value="reservapor_id"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/buscarpatente.aspx" Text="vehiculo" 
+                        Value="vehiculo"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+                    </td>
+                    <td>
+        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" 
+            LogoutPageUrl="~/rentarvehiculo.aspx" BorderStyle="Solid" ForeColor="White" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Content>
+
 

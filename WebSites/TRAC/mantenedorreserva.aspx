@@ -10,7 +10,9 @@
 </p>
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
     DataKeyNames="ID_RESERVA" DataSourceID="SqlDataSource1" 
-    EmptyDataText="No hay registros de datos para mostrar.">
+    EmptyDataText="No hay registros de datos para mostrar." CellPadding="4" 
+        ForeColor="Red" GridLines="None">
+    <AlternatingRowStyle BackColor="White" />
     <Columns>
         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         <asp:BoundField DataField="ID_RESERVA" HeaderText="ID_RESERVA" ReadOnly="True" 
@@ -40,6 +42,16 @@
         <asp:BoundField DataField="RUT_ADMIINISTRADOR" HeaderText="RUT_ADMIINISTRADOR" 
             SortExpression="RUT_ADMIINISTRADOR" />
     </Columns>
+    <EditRowStyle BackColor="#7C6F57" />
+    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+    <RowStyle BackColor="#E3EAEB" />
+    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+    <SortedAscendingCellStyle BackColor="#F8FAFA" />
+    <SortedAscendingHeaderStyle BackColor="#246B61" />
+    <SortedDescendingCellStyle BackColor="#D4DFE1" />
+    <SortedDescendingHeaderStyle BackColor="#15524A" />
 </asp:GridView>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
@@ -86,184 +98,6 @@
     &nbsp;</p>
 <p>
 </p>
-<asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_RESERVA" 
-    DataSourceID="SqlDataSource1">
-    <EditItemTemplate>
-        ID_RESERVA:
-        <asp:Label ID="ID_RESERVALabel1" runat="server" 
-            Text='<%# Eval("ID_RESERVA") %>' />
-        <br />
-        KM_INICIAL:
-        <asp:TextBox ID="KM_INICIALTextBox" runat="server" 
-            Text='<%# Bind("KM_INICIAL") %>' />
-        <br />
-        KM_FINAL:
-        <asp:TextBox ID="KM_FINALTextBox" runat="server" 
-            Text='<%# Bind("KM_FINAL") %>' />
-        <br />
-        FECHA_RETIRO:
-        <asp:TextBox ID="FECHA_RETIROTextBox" runat="server" 
-            Text='<%# Bind("FECHA_RETIRO") %>' />
-        <br />
-        FECHA_ENTREGA:
-        <asp:TextBox ID="FECHA_ENTREGATextBox" runat="server" 
-            Text='<%# Bind("FECHA_ENTREGA") %>' />
-        <br />
-        LUGAR_RETIRO:
-        <asp:TextBox ID="LUGAR_RETIROTextBox" runat="server" 
-            Text='<%# Bind("LUGAR_RETIRO") %>' />
-        <br />
-        LUGAR_ENTREGA:
-        <asp:TextBox ID="LUGAR_ENTREGATextBox" runat="server" 
-            Text='<%# Bind("LUGAR_ENTREGA") %>' />
-        <br />
-        VALOR_RESERVA:
-        <asp:TextBox ID="VALOR_RESERVATextBox" runat="server" 
-            Text='<%# Bind("VALOR_RESERVA") %>' />
-        <br />
-        RUT_CLIENTE:
-        <asp:TextBox ID="RUT_CLIENTETextBox" runat="server" 
-            Text='<%# Bind("RUT_CLIENTE") %>' />
-        <br />
-        ID_PATENTE:
-        <asp:TextBox ID="ID_PATENTETextBox" runat="server" 
-            Text='<%# Bind("ID_PATENTE") %>' />
-        <br />
-        ID_SERVICIO:
-        <asp:TextBox ID="ID_SERVICIOTextBox" runat="server" 
-            Text='<%# Bind("ID_SERVICIO") %>' />
-        <br />
-        NUMERO_TRANSACCION:
-        <asp:TextBox ID="NUMERO_TRANSACCIONTextBox" runat="server" 
-            Text='<%# Bind("NUMERO_TRANSACCION") %>' />
-        <br />
-        RUT_ADMIINISTRADOR:
-        <asp:TextBox ID="RUT_ADMIINISTRADORTextBox" runat="server" 
-            Text='<%# Bind("RUT_ADMIINISTRADOR") %>' />
-        <br />
-        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
-            CommandName="Update" Text="Actualizar" />
-        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
-            CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
-    </EditItemTemplate>
-    <InsertItemTemplate>
-        ID_RESERVA:
-        <asp:TextBox ID="ID_RESERVATextBox" runat="server" 
-            Text='<%# Bind("ID_RESERVA") %>' />
-        <br />
-        KM_INICIAL:
-        <asp:TextBox ID="KM_INICIALTextBox" runat="server" 
-            Text='<%# Bind("KM_INICIAL") %>' />
-        <br />
-        KM_FINAL:
-        <asp:TextBox ID="KM_FINALTextBox" runat="server" 
-            Text='<%# Bind("KM_FINAL") %>' />
-        <br />
-        FECHA_RETIRO:
-        <asp:TextBox ID="FECHA_RETIROTextBox" runat="server" 
-            Text='<%# Bind("FECHA_RETIRO") %>' />
-        <br />
-        FECHA_ENTREGA:
-        <asp:TextBox ID="FECHA_ENTREGATextBox" runat="server" 
-            Text='<%# Bind("FECHA_ENTREGA") %>' />
-        <br />
-        LUGAR_RETIRO:
-        <asp:TextBox ID="LUGAR_RETIROTextBox" runat="server" 
-            Text='<%# Bind("LUGAR_RETIRO") %>' />
-        <br />
-        LUGAR_ENTREGA:
-        <asp:TextBox ID="LUGAR_ENTREGATextBox" runat="server" 
-            Text='<%# Bind("LUGAR_ENTREGA") %>' />
-        <br />
-        VALOR_RESERVA:
-        <asp:TextBox ID="VALOR_RESERVATextBox" runat="server" 
-            Text='<%# Bind("VALOR_RESERVA") %>' />
-        <br />
-        RUT_CLIENTE:
-        <asp:TextBox ID="RUT_CLIENTETextBox" runat="server" 
-            Text='<%# Bind("RUT_CLIENTE") %>' />
-        <br />
-        ID_PATENTE:
-        <asp:TextBox ID="ID_PATENTETextBox" runat="server" 
-            Text='<%# Bind("ID_PATENTE") %>' />
-        <br />
-        ID_SERVICIO:
-        <asp:TextBox ID="ID_SERVICIOTextBox" runat="server" 
-            Text='<%# Bind("ID_SERVICIO") %>' />
-        <br />
-        NUMERO_TRANSACCION:
-        <asp:TextBox ID="NUMERO_TRANSACCIONTextBox" runat="server" 
-            Text='<%# Bind("NUMERO_TRANSACCION") %>' />
-        <br />
-        RUT_ADMIINISTRADOR:
-        <asp:TextBox ID="RUT_ADMIINISTRADORTextBox" runat="server" 
-            Text='<%# Bind("RUT_ADMIINISTRADOR") %>' />
-        <br />
-        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
-            CommandName="Insert" Text="Insertar" />
-        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
-            CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
-    </InsertItemTemplate>
-    <ItemTemplate>
-        ID_RESERVA:
-        <asp:Label ID="ID_RESERVALabel" runat="server" 
-            Text='<%# Eval("ID_RESERVA") %>' />
-        <br />
-        KM_INICIAL:
-        <asp:Label ID="KM_INICIALLabel" runat="server" 
-            Text='<%# Bind("KM_INICIAL") %>' />
-        <br />
-        KM_FINAL:
-        <asp:Label ID="KM_FINALLabel" runat="server" Text='<%# Bind("KM_FINAL") %>' />
-        <br />
-        FECHA_RETIRO:
-        <asp:Label ID="FECHA_RETIROLabel" runat="server" 
-            Text='<%# Bind("FECHA_RETIRO") %>' />
-        <br />
-        FECHA_ENTREGA:
-        <asp:Label ID="FECHA_ENTREGALabel" runat="server" 
-            Text='<%# Bind("FECHA_ENTREGA") %>' />
-        <br />
-        LUGAR_RETIRO:
-        <asp:Label ID="LUGAR_RETIROLabel" runat="server" 
-            Text='<%# Bind("LUGAR_RETIRO") %>' />
-        <br />
-        LUGAR_ENTREGA:
-        <asp:Label ID="LUGAR_ENTREGALabel" runat="server" 
-            Text='<%# Bind("LUGAR_ENTREGA") %>' />
-        <br />
-        VALOR_RESERVA:
-        <asp:Label ID="VALOR_RESERVALabel" runat="server" 
-            Text='<%# Bind("VALOR_RESERVA") %>' />
-        <br />
-        RUT_CLIENTE:
-        <asp:Label ID="RUT_CLIENTELabel" runat="server" 
-            Text='<%# Bind("RUT_CLIENTE") %>' />
-        <br />
-        ID_PATENTE:
-        <asp:Label ID="ID_PATENTELabel" runat="server" 
-            Text='<%# Bind("ID_PATENTE") %>' />
-        <br />
-        ID_SERVICIO:
-        <asp:Label ID="ID_SERVICIOLabel" runat="server" 
-            Text='<%# Bind("ID_SERVICIO") %>' />
-        <br />
-        NUMERO_TRANSACCION:
-        <asp:Label ID="NUMERO_TRANSACCIONLabel" runat="server" 
-            Text='<%# Bind("NUMERO_TRANSACCION") %>' />
-        <br />
-        RUT_ADMIINISTRADOR:
-        <asp:Label ID="RUT_ADMIINISTRADORLabel" runat="server" 
-            Text='<%# Bind("RUT_ADMIINISTRADOR") %>' />
-        <br />
-        <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" 
-            CommandName="Edit" Text="Editar" />
-        &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" 
-            CommandName="Delete" Text="Eliminar" />
-        &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" 
-            CommandName="New" Text="Nuevo" />
-    </ItemTemplate>
-</asp:FormView>
 <p>
 </p>
 <p>
